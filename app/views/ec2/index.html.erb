@@ -1,0 +1,30 @@
+<table>
+	<% @instances.each do |instance| %>
+		<tr>
+			<td><%= instance[:id] %></td>
+			<td><%= instance[:state] %></td>
+	  		<td><%= instance[:ip] %></td>
+	  		<td><%= instance[:type] %></td>
+	  		<td><%= instance[:key] %></td>
+		</tr>
+	<% end %>
+<table>
+
+<table>
+	<% @volumes.each do |volume| %>
+		<tr>
+			<td><%= volume[:id] %></td>
+			<td><%= volume[:size] %></td>
+	  		<td><%= volume[:instances] %></td>
+		</tr>
+	<% end %>
+<table>
+
+<table>
+	<% @addresses.each do |address| %>
+		<tr>
+			<td><%= address[:ip] %></td>
+			<td><%= address[:instance] %></td>
+		</tr>
+	<% end %>
+<table>
